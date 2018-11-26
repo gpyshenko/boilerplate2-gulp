@@ -1,6 +1,19 @@
 {% extends "base/base.njk" %}
+{% block styles %}
+    {# Стили на этой странице - Начало #}
+    {% for file in ['components/pagination/pagination'] %}
+        <link rel="stylesheet" href="{{ 'templates/' + file + '.css' }}">
+    {% endfor %}
+    {# Стили на этой странице - Конец #}
+{% endblock %}
 {% block main %}
-    <!-- Стили на этой странице -->
-    <link rel="stylesheet" href="templates/blocks/navigation/navigation.css">
-    <!-- Стили на этой странице -->
+    <h1>Index page</h1>
+    {% include "components/pagination/pagination.njk" %}
 {% endblock  %}
+{% block scripts %}
+    {# Скрипты на этой странице - Начало #}
+    {% for file in [{dir: "scripts/", path: "components/info"}, {dir: "templates/", path: "components/pagination/pagination"}] %}
+        <script src="{{ file.dir + file.path + '.js' }}"></script>
+    {% endfor %}
+    {# Скрипты на этой странице - Конец #}
+{% endblock %}

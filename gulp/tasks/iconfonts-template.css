@@ -1,24 +1,22 @@
 @font-face {
 	font-family: "<%= fontName %>";
-	src: 
-		url('<%= fontPath %>/<%= fontName %>.woff2<%= cacheBusterQueryString %>') format('woff2'),
-		url('<%= fontPath %>/<%= fontName %>.woff<%= cacheBusterQueryString %>') format('woff');
+	src: url("<%= fontPath %>/<%= fontName %>.woff2<%= cacheBusterQueryString %>") format("woff2"),
+		url("<%= fontPath %>/<%= fontName %>.woff<%= cacheBusterQueryString %>") format("woff");
 }
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"], [class*="icon-"] {
 	font-family: "<%= fontName %>";
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	font-style: normal;
 	font-variant: normal;
-	font-weight: normal;
+	font-weight: 400;
     line-height: 1;
-	/* speak: none; only necessary if not using the private unicode range (firstGlyph option) */
 	text-decoration: none;
     text-transform: none;
 }
 
 <% _.each(glyphs, function(glyph) { %>
-.<%= cssClass %>-<%= glyph.fileName %>:before {
+.<%= cssClass %>-<%= glyph.fileName %>::before {
 	content: "\<%= glyph.codePoint %>";
 }
 <% }); %>

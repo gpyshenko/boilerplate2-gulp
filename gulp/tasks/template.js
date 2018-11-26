@@ -16,7 +16,7 @@ const nunjucksConfig = {
 
 module.exports = function () {
     return function(cb) {
-        gulp.src(paths.src + '/**/*.njk')
+        gulp.src(`${paths.src}/**/*.njk`)
             .pipe(plumber())
             .pipe(nunjucksRender(nunjucksConfig))
             .pipe(gulpif(argv.prod, prettyHtml(htmlPrettyConfig)))

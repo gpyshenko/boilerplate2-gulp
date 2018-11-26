@@ -40,7 +40,7 @@ let watchFiles = function(cb) {
     if (argv.dev) {
         gulp.watch(`${paths.src}/**/*.njk`, gulp.series('template'));
         gulp.watch(`${paths.src}/**/*.css`, gulp.series('styles'));
-        gulp.watch(paths.src + paths.scripts + '**/*.js', gulp.series('scripts:common'));
+        gulp.watch(paths.src + '/**/*.js', gulp.series('scripts'));
         gulp.watch(paths.src + paths.assets + '**/*', gulp.series('assets'));
     }
     cb()

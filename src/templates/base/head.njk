@@ -1,15 +1,15 @@
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Nunj title</title>
+<meta charset="UTF-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Nunj title</title>
 
-    <meta name="format-detection" content="telephone=no">
-    <meta name="format-detection" content="address=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="address=no">
 
-    <link rel="shortcut icon" href="assets/img/icons/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="assets/img/icons/favicon.ico" type="image/x-icon">
 
-    {% for file in ['main'] %}
-        <link rel="stylesheet" href="{{ 'styles/' + file + '.css' }}">
-    {% endfor %}
-</head>
+<!-- Стили общие для всего сайта - Начало -->
+{% for file in ['main'] %}
+    <link rel="stylesheet" href="{{ 'styles/' + file + '.css' }}">
+{% endfor %}
+<!-- Стили общие для всего сайта - Конец -->

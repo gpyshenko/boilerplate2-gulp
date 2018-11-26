@@ -1,6 +1,4 @@
 {
-    "vendorsScripts": ["base/methods.js"],
-    "commonsScripts": ["main.js"],
     "browsersList": ["last 5 version", "not ie <= 11"],
     "iconfonts": ["ttf", "svg", "woff", "woff2"],
     "domain": "https://mysite.io/"
