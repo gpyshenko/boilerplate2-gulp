@@ -1,0 +1,30 @@
+.container {
+    width: 100%;
+    max-width: 1170px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flexRow, .flexColumn, .flexWrap, .flexGrid { 
+    display: flex;
+}
+
+.flexColumn {
+    flex-direction: column;
+}
+
+.flexWrap, .flexGrid {
+    flex-wrap: wrap;
+}
+
+.flexGrid {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.flexCell {
+    padding-right: 15px;
+    padding-left: 15px;
+}

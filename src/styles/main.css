@@ -1,0 +1,12 @@
+/* Default */
+@import "default/variables.css";
+@import "default/reset.css";
+@import "default/grid.css";
+@import "default/typography.css";
+
+/* Components */
+@import "../templates/components/buttons/buttons.css";
+
+/* Blocks */
+@import "../templates/blocks/header/header.css";
+@import "../templates/blocks/footer/footer.css"; 

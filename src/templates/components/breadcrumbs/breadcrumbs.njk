@@ -1,0 +1,6 @@
+{% macro breadcrumbs(name, value='', type='text') %}
+<div class="breadcrumbs">
+  <input type="{{ type }}" name="{{ name }}"
+         value="{{ value | escape }}" />
+</div>
+{% endmacro %}

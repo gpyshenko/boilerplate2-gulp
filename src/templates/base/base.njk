@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include "base/head.njk" %}
+<body class="flexColumn">
+    {% include "blocks/header/header.njk" %}
+    {% block main %}{% endblock %}
+    {% include "blocks/footer/footer.njk" %}
+
+    {% for file in ['main','vendors/methods'] %}
+        <script src="{{ 'scripts/' + file + '.js' }}"></script>
+    {% endfor %}
+</body>
+</html>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="14.656" height="3.531" viewBox="0 0 14.656 3.531">
+  <defs>
+    <style>
+      .cls-1 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="минус_карточка" data-name="минус карточка" class="cls-1" d="M945.065,768.38h14.666v-3.531H945.065v3.531Z" transform="translate(-945.063 -764.844)"/>
+</svg>

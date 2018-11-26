@@ -1,0 +1,88 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, ul, li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    font-size: 16px;
+    font-family: var(--mainFont);
+    font-weight: 400;
+    line-height: 1;
+    color: var(--mainColor);
+    background-color: #fff;
+    overflow-x: hidden;
+} 
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    outline: none;
+    &:not([class]) {
+        display: inline-block; 
+        text-decoration: underline;
+    }
+}
+
+button {
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+input[type="search"] {
+    &::-webkit-search-cancel-button {
+        display: none;
+    }
+    &::-ms-clear {
+        display: none;
+    }
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+textarea {
+    resize: none;
+}
+
+button, input, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    border: none;
+    outline: none;
+}
+
+hr {
+    display: block;
+    width: 100%;
+    height: 1px;
+    padding: 0;
+    margin: 0;
+    background-color: var(--mainColor);
+    border: none;
+}
