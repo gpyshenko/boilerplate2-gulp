@@ -14,6 +14,8 @@ lazyRequireTask('styles', { file: 'styles' });
 // - Scripts
 lazyRequireTask('scripts', { file: 'scripts'});
 
+lazyRequireTask('vendors', { file: 'vendors' });
+
 // // - Assets
 lazyRequireTask('assets', { file: 'assets'});
 lazyRequireTask('imagemin', { file: 'imagemin'});

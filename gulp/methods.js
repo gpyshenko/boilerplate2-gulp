@@ -16,22 +16,10 @@ let lazyRequireTask = function (taskName, props, options) {
     })
 }
 
-let createSrcLinks = function (arr) {
-    if (argv.prod) {
-        var array = [];
-        arr.forEach(function (el) {
-            array.push(el + '.min')
-        });
-        return array;
-    } else {
-        return arr;
-    }
-}
-
-let createScriptsArray = function(arr, dir) {
+let createVendorsArray = function(arr) {
     var array = [];
     arr.forEach(function (el) {
-        array.push(paths.src + dir + el)
+        array.push(paths.vendors + el)
     });
     return array;
 }
@@ -49,7 +37,6 @@ let watchFiles = function(cb) {
 module.exports = {
     getTask,
     lazyRequireTask,
-    createSrcLinks,
-    createScriptsArray,
+    createVendorsArray,
     watchFiles
 }

@@ -1,6 +1,10 @@
 {% extends "base/base.njk" %}
 {% block styles %}
     {# Стили на этой странице - Начало #}
+    {% for file in ['slick','slick-theme'] %}
+        <link rel="stylesheet" href="{{ 'vendors/' + file + '.css' }}">
+    {% endfor %}
+
     {% for file in ['components/pagination/pagination'] %}
         <link rel="stylesheet" href="{{ 'templates/' + file + '.css' }}">
     {% endfor %}
@@ -14,6 +18,10 @@
 
 {% block scripts %}
     {# Скрипты на этой странице - Начало #}
+    {% for file in ['slick'] %}
+        <script src="{{ 'vendors/' + file + '.min.js' }}"></script>
+    {% endfor %}
+
     {% for file in [{dir: "scripts/", path: "components/info"}, {dir: "templates/", path: "components/pagination/pagination"}] %}
         <script src="{{ file.dir + file.path + '.js' }}"></script>
     {% endfor %}

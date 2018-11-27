@@ -7,6 +7,7 @@ const paths = {
     icons: 'iconfonts',
     maps: './maps',
     tasks: './tasks/',
+    vendors: './vendors/'
 };
 
 paths.iconFonts = paths.src + paths.assets + paths.fonts + paths.icons;

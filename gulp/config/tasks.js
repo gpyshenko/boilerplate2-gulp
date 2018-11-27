@@ -1,7 +1,7 @@
 const { argv } = require('../plugins/tools');
 
 let tasks,
-    tasksDev = ['template', 'styles', 'scripts', 'assets'],
+    tasksDev = ['template', 'styles', 'scripts', 'vendors','assets'],
     tasksProd = ['imagemin']
 
 if (argv.dev) {
