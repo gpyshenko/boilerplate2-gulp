@@ -6,10 +6,12 @@
     {% endfor %}
     {# Стили на этой странице - Конец #}
 {% endblock %}
+
 {% block main %}
     <h1>Index page</h1>
     {% include "components/pagination/pagination.njk" %}
 {% endblock  %}
+
 {% block scripts %}
     {# Скрипты на этой странице - Начало #}
     {% for file in [{dir: "scripts/", path: "components/info"}, {dir: "templates/", path: "components/pagination/pagination"}] %}
