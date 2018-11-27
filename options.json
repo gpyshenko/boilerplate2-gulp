@@ -3,13 +3,7 @@
     "iconfonts": ["ttf", "svg", "woff", "woff2"],
     "domain": "https://mysite.io/",
     "vendors": {
-        "styles": [
-            "slick-carousel/slick/slick.css",
-            "slick-carousel/slick/slick-theme.css"
-        ],
-        "scripts": [
-            "jquery/dist/jquery.min.js",
-            "slick-carousel/slick/slick.min.js"
-        ]
+        "styles": [],
+        "scripts": []
     }
 }

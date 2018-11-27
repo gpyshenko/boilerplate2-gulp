@@ -16,12 +16,20 @@ let lazyRequireTask = function (taskName, props, options) {
     })
 }
 
-let createVendorsArray = function(arr) {
-    var array = [];
-    arr.forEach(function (el) {
-        array.push(paths.vendors + el)
+let createVendorsArray = function (...args) {
+    let originalArray;
+    if (args[0].length <= 0) {
+        originalArray = [...args[1]];
+    } else if (args[1].length <= 0) {
+        originalArray = [...args[0]];
+    } else {
+        originalArray = [...args[0], ...args[1]];
+    }
+    let modifyArray = [];
+    originalArray.forEach(function (el) {
+        modifyArray.push(paths.vendors + el)
     });
-    return array;
+    return modifyArray;
 }
 
 let watchFiles = function(cb) {
@@ -31,7 +39,7 @@ let watchFiles = function(cb) {
         gulp.watch(paths.src + '/**/*.js', gulp.series('scripts'));
         gulp.watch(paths.src + paths.assets + '**/*', gulp.series('assets'));
     }
-    cb()
+    cb();
 };
 
 module.exports = {
