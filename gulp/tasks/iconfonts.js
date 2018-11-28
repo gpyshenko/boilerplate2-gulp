@@ -1,24 +1,22 @@
 const { gulp } = require('../plugins/tools');
-const { paths, source } = require('../config');
-const { iconfonts } = require('../../lib/get-options');
+const { paths } = require('../config');
+const { iconfonts } = require('../../options.json');
 const iconfont = require('gulp-iconfont');
 const iconfontCss = require('gulp-iconfont-css');
-
-const fontName = 'icons';
 
 module.exports = function() {
     return function(cb) {
         gulp.src([paths.src + paths.assets + 'iconfonts/*.svg'])
             .pipe(iconfontCss({
-                fontName: fontName,
+                fontName: iconfonts.fontName,
                 path: './gulp/tasks/iconfonts-template.css',
-                targetPath: '../../../styles/' + source.css.icons,
+                targetPath: '../../../styles/' + iconfonts.file,
                 fontPath: '../assets/fonts/iconfonts'
             }))
             .pipe(iconfont({
-                fontName: fontName,
+                fontName: iconfonts.fontName,
                 normalize: true,
-                formats: iconfonts,
+                formats: iconfonts.exts,
                 fontHeight: 1000,
                 centerHorizontally: true
             }))

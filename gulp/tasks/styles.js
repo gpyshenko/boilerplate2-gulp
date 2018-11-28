@@ -1,4 +1,5 @@
-const { paths, source } = require('../config');
+const { paths } = require('../config');
+const { browsersList } = require('../../options.json');
 const { gulp, connect, gulpif, argv, plumber, sourcemaps } = require('../plugins/tools');
 
 const postcss = require('gulp-postcss'),
@@ -12,7 +13,7 @@ const postcss = require('gulp-postcss'),
     
 const processors = [
     precss,
-    autoprefixer({ browsers: source.browsersList }),
+    autoprefixer({ browsers: browsersList }),
     lineHeightConverter(),
     mqpacker({ sort: sortCSSmq.desktopFirst })
 ];

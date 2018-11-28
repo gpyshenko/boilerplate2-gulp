@@ -1,6 +1,17 @@
 {
-    "browsersList": ["last 5 version", "not ie <= 11"],
-    "iconfonts": ["ttf", "svg", "woff", "woff2"],
+    "browsersList": [
+        "last 5 version",
+        "not ie <= 11"
+    ],
+    "iconfonts": {
+        "file": "iconfonts.css",
+        "fontName": "icons",
+        "exts": [
+            "svg",
+            "woff",
+            "woff2"
+        ]
+    },
     "domain": "https://mysite.io/",
     "vendors": {
         "styles": [],

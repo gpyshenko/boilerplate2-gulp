@@ -1,5 +1,6 @@
 const { gulp } = require('./gulp/plugins/tools');
-const { tasks, paths, source } = require('./gulp/config');
+const { tasks, paths } = require('./gulp/config');
+const { iconfonts } = require('./options.json');
 const { getTask, lazyRequireTask, watchFiles } = require('./gulp/methods');
 
 // - Livereload
@@ -26,7 +27,7 @@ lazyRequireTask('fonts:woff2', { file: 'fonts', method: 'woff2' });
 
 // - Utils
 gulp.task('clean', getTask('clean', paths.dist));
-gulp.task('clean:iconfonts', getTask('clean', [paths.iconFonts, paths.src + paths.styles + source.css.icons]));
+gulp.task('clean:iconfonts', getTask('clean', [paths.iconFonts, paths.src + paths.styles + iconfonts.file]));
 gulp.task('zip', getTask('zip'));
 gulp.task('validate', getTask('validate'));
 
