@@ -12,9 +12,5 @@
             "woff2"
         ]
     },
-    "domain": "https://mysite.io/",
-    "vendors": {
-        "styles": [],
-        "scripts": []
-    }
+    "domain": "https://mysite.io/"
 }

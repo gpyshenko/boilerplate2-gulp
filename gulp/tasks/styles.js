@@ -1,6 +1,6 @@
 const { paths } = require('../config');
 const { browsersList } = require('../../options.json');
-const { gulp, connect, gulpif, argv, plumber, sourcemaps } = require('../plugins/tools');
+const { gulp, gulpif, argv, plumber, sourcemaps } = require('../plugins/tools');
 
 const postcss = require('gulp-postcss'),
     autoprefixer = require('autoprefixer'),
@@ -31,8 +31,7 @@ module.exports = function () {
             }))
             .pipe(gulpif(argv.dev, sourcemaps.write(paths.maps)))
             .pipe(gulpif(argv.prod, cleanCSS()))
-            .pipe(gulp.dest(paths.dist))
-            .pipe(connect.reload());
+            .pipe(gulp.dest(paths.dist));
         cb();
     }
 }

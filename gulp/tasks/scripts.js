@@ -1,5 +1,5 @@
 const { paths } = require('../config');
-const { gulp, gulpif, argv, connect, plumber, sourcemaps } = require('../plugins/tools');
+const { gulp, gulpif, argv, plumber, sourcemaps } = require('../plugins/tools');
 
 module.exports = function() {
     return function (cb) {
@@ -7,8 +7,7 @@ module.exports = function() {
             .pipe(plumber())
             .pipe(gulpif(argv.dev, sourcemaps.init()))
             .pipe(gulpif(argv.dev, sourcemaps.write(paths.maps)))
-            .pipe(gulp.dest(paths.dist))
-            .pipe(connect.reload());
+            .pipe(gulp.dest(paths.dist));
         cb();
     }
 }
