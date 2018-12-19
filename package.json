@@ -18,9 +18,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^8.5.1",
+    "autoprefixer": "9.4.3",
     "browser-sync": "^2.26.3",
-    "css-mqpacker": "^6.0.2",
+    "css-mqpacker": "7.0.0",
     "del": "^3.0.0",
     "gulp": "^4.0.0",
     "gulp-clean-css": "^3.9.2",
