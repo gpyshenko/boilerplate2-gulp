@@ -2,7 +2,7 @@ const { paths } = require('../config');
 const { gulp, gulpif, argv, plumber, sourcemaps } = require('../plugins/tools');
 
 function scripts(cb) {
-    gulp.src(`${paths.src}/**/*.js`)
+    gulp.src([`${paths.src}/**/*.js`, `!${paths.src}/vendors/**/*.js`])
         .pipe(plumber())
         .pipe(gulpif(argv.dev, sourcemaps.init()))
         .pipe(gulpif(argv.dev, sourcemaps.write(paths.maps)))

@@ -2,8 +2,6 @@ const { gulp } = require('./gulp/plugins/tools');
 const { tasks, paths } = require('./gulp/config');
 const { iconfonts } = require('./options.json');
 const { getTask, lazyRequireTask, watchFiles } = require('./gulp/methods');
-// - Livereload
-lazyRequireTask('connect', { file: 'livereload'})
 
 // - Templates
 lazyRequireTask('template', { file: 'template' })
