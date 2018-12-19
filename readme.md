@@ -1,7 +1,7 @@
-# Gulp boilerplate
+# Gulp-simple
 > Boilerplate for optimized layout
 
-## Usage
+## Установка
 
 Для начала надо установить все зависимости для сборки проекта
 
@@ -9,7 +9,7 @@
 npm i
 ```
 
-### What's Included
+## Как использовать
 
 - `npm run dev`: Компиляция проекта под разработку.
 
@@ -26,3 +26,11 @@ npm i
 - `npm run zip`: Создание архива из папки `dist`.
 
 - `npm run links`: Создание файла `links.txt` с ссылками на все страницы.
+
+## Что входит
+
+#### Плагины для CSS
+
+- [PostCSS](https://postcss.org/)
+    - [autoprefixer](https://github.com/postcss/autoprefixer)
+    - [precss](https://github.com/jonathantneal/precss)
