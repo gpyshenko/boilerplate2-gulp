@@ -1,9 +1,7 @@
 const { paths } = require('./config');
 const { gulp } = require('./plugins/tools');
 
-let getTask = function (task, options) {
-    return require(paths.tasks + task)(options);
-}
+let getTask = (task, options) => require(paths.tasks + task)(options);
 
 let lazyRequireTask = function (taskName, props, options) {
     options = options || {};

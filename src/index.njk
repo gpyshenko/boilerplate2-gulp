@@ -18,10 +18,6 @@
 
 {% block scripts %}
     {# Скрипты на этой странице - Начало #}
-    {% for file in ['slick'] %}
-        <script src="{{ 'vendors/' + file + '.min.js' }}"></script>
-    {% endfor %}
-
     {% for file in [{dir: "scripts/", path: "components/info"}, {dir: "templates/", path: "components/pagination/pagination"}] %}
         <script src="{{ file.dir + file.path + '.js' }}"></script>
     {% endfor %}

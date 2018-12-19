@@ -9,8 +9,8 @@
     {% block main %}{% endblock %}
     {% include "blocks/footer/footer.njk" %}
     <!-- Скрипты общие для всего сайта - Начало -->
-    {% for file in ['jquery'] %}
-        <script src="{{ 'vendors/' + file + '.min.js' }}"></script>
+    {% for file in ['main'] %}
+        <script src="{{ 'scripts/' + file + '.js' }}"></script>
     {% endfor %}
     <!-- Скрипты общие для всего сайта - Конец -->
     {% block scripts %}{% endblock %}

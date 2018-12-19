@@ -1,15 +1,15 @@
-const { paths, port } = require('../config');
-const { connect, opn } = require('../plugins/tools');
-const livereload = require('gulp-livereload');
+const { port } = require('../config');
+const { gulp } = require('../plugins/tools');
+const browserSync = require("browser-sync").create();
 
-module.exports = function () {
-    return function (cb) {
-        connect.server({
-            port: port,
-            root: paths.dist,
-            livereload: true
-        });
-        opn(`http://localhost:${port}`);
-        cb()
-    }
-};
+function browsersync() {
+    browserSync.init({
+        server: {
+            baseDir: "./dist"
+        },
+        port
+    });
+    gulp.watch(`./dist/**`).on('change', browserSync.reload)
+}
+
+module.exports = () => browsersync;

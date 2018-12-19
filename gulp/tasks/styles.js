@@ -18,20 +18,20 @@ const processors = [
     mqpacker({ sort: sortCSSmq.desktopFirst })
 ];
 
-module.exports = function () {
-    return function (cb) {
-        gulp.src(`${paths.src}/**/*.css`)
-            .pipe(plumber())
-            .pipe(gulpif(argv.dev, sourcemaps.init()))
-            .pipe(postcss(processors))
-            .pipe(gulpStylelint({
-                reporters: [
-                    { formatter: 'string', console: true }
-                ]
-            }))
-            .pipe(gulpif(argv.dev, sourcemaps.write(paths.maps)))
-            .pipe(gulpif(argv.prod, cleanCSS()))
-            .pipe(gulp.dest(paths.dist));
-        cb();
-    }
+function styles(cb) {
+    gulp.src(`${paths.src}/**/*.css`)
+        .pipe(plumber())
+        .pipe(gulpif(argv.dev, sourcemaps.init()))
+        .pipe(postcss(processors))
+        .pipe(gulpStylelint({
+            reporters: [
+                { formatter: 'string', console: true }
+            ]
+        }))
+        .pipe(gulpif(argv.dev, sourcemaps.write(paths.maps)))
+        .pipe(gulpif(argv.prod, cleanCSS()))
+        .pipe(gulp.dest(paths.dist));
+    cb();
 }
+
+module.exports = () => styles;

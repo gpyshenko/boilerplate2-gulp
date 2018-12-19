@@ -2,8 +2,6 @@ const { gulp } = require('./gulp/plugins/tools');
 const { tasks, paths } = require('./gulp/config');
 const { iconfonts } = require('./options.json');
 const { getTask, lazyRequireTask, watchFiles } = require('./gulp/methods');
-const browserSync = require("browser-sync").create();
-
 // - Livereload
 lazyRequireTask('connect', { file: 'livereload'})
 
@@ -36,17 +34,10 @@ gulp.task('validate', getTask('validate'));
 gulp.task('iconfonts', gulp.series('clean:iconfonts', getTask('iconfonts')));
 gulp.task('fonts', gulp.series('fonts:woff', 'fonts:woff2'));
 
-function browsersync() {
-    browserSync.init({
-        server: {
-            baseDir: "./dist"
-        },
-        port: 3000
-    });
-    gulp.watch(`./dist/**`).on('change', browserSync.reload)
-}
+// - Browser-Sync
+lazyRequireTask('browsersync', { file: 'livereload' });
 
 // - Mode
 gulp.task('build', gulp.parallel(...tasks));
-gulp.task('dev', gulp.series('build', gulp.parallel(watchFiles), browsersync));
+gulp.task('dev', gulp.series('build', gulp.parallel(watchFiles), 'browsersync'));
 gulp.task('prod', gulp.series('clean', 'build'));

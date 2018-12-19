@@ -14,13 +14,13 @@ const nunjucksConfig = {
     ext: '.html'
 }
 
-module.exports = function () {
-    return function(cb) {
-        gulp.src(`${paths.src}/**/*.njk`)
-            .pipe(plumber())
-            .pipe(nunjucksRender(nunjucksConfig))
-            .pipe(gulpif(argv.prod, prettyHtml(htmlPrettyConfig)))
-            .pipe(gulp.dest(paths.dist));
-        cb()
-    }
-};
+function templates(cb) {
+    gulp.src(`${paths.src}/**/*.njk`)
+        .pipe(plumber())
+        .pipe(nunjucksRender(nunjucksConfig))
+        .pipe(gulpif(argv.prod, prettyHtml(htmlPrettyConfig)))
+        .pipe(gulp.dest(paths.dist));
+    cb()
+}
+
+module.exports = () => templates;
