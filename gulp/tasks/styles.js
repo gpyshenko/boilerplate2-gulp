@@ -19,7 +19,7 @@ const processors = [
 ];
 
 function styles(cb) {
-    gulp.src(`${paths.src}/**/*.css`)
+    gulp.src([`${paths.src}/**/*.css`, `!${paths.src}/vendors/**/*.css`])
         .pipe(plumber())
         .pipe(gulpif(argv.dev, sourcemaps.init()))
         .pipe(postcss(processors))
