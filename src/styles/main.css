@@ -4,8 +4,7 @@
 @import "default/grid.css";
 @import "default/typography.css";
 
-/* Components */
-@import "../templates/components/buttons/buttons.css";
+/* Components */ 
 
 /* Blocks */
 @import "../templates/blocks/header/header.css";

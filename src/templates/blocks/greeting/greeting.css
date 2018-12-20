@@ -1,0 +1,15 @@
+.greeting {
+    height: 100%;
+    &-logo {
+        margin-bottom: 30px;
+    }
+    &-title {
+        margin-bottom: 15px;
+        font-size: 24px;
+        text-align: center;
+    }
+    &-dscr {
+        font-style: italic;
+        text-align: center;
+    }
+}

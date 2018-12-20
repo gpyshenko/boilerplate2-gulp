@@ -1,25 +1,29 @@
 {% extends "base/base.njk" %}
 {% block styles %}
+    {% set stylesArr = [
+        {core: 'blocks', dir: 'greeting', name: 'greeting'},
+        {core: 'components', dir: 'logo', name: 'logo'}
+    ] %}
+
     {# Стили на этой странице - Начало #}
     {# {% for file in ['slick','slick-theme'] %}
         <link rel="stylesheet" href="{{ 'vendors/' + file + '.css' }}">
     {% endfor %} #}
    
-    {% for file in ['components/pagination/pagination'] %}
-        <link rel="stylesheet" href="{{ 'templates/' + file + '.css' }}">
+    {% for file in stylesArr %}
+        <link rel="stylesheet" href="{{ 'templates/' + file.core + '/' + file.dir + '/' + file.name + '.css' }}">
     {% endfor %}
     {# Стили на этой странице - Конец #}
 {% endblock %}
 
 {% block main %}
-    <h1>Index page</h1>
-    {% include "components/pagination/pagination.njk" %}
+    {% include "blocks/greeting/greeting.njk" %}
 {% endblock  %}
 
 {% block scripts %}
     {# Скрипты на этой странице - Начало #}
-    {% for file in [{dir: "scripts/", path: "components/info"}, {dir: "templates/", path: "components/pagination/pagination"}] %}
+    {# {% for file in [{dir: "scripts/", path: "components/info"} %}
         <script src="{{ file.dir + file.path + '.js' }}"></script>
-    {% endfor %}
+    {% endfor %} #}
     {# Скрипты на этой странице - Конец #}
 {% endblock %}

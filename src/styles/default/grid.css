@@ -7,12 +7,24 @@
     margin-right: auto;
 }
 
-.flexRow, .flexColumn, .flexWrap, .flexGrid { 
+.flexRow, 
+.flexRow-C,
+.flexColumn, 
+.flexColumn-C, 
+.flexWrap, 
+.flexGrid { 
     display: flex;
 }
 
-.flexColumn {
+.flexColumn,
+.flexColumn-C {
     flex-direction: column;
+}
+
+.flexRow-C,
+.flexColumn-C {
+    justify-content: center;
+    align-items: center;
 }
 
 .flexWrap, .flexGrid {

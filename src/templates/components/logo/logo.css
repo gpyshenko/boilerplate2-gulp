@@ -1,0 +1,10 @@
+.logo {
+    display: block;
+    width: 140px;
+    height: 140px;
+    padding: 20px;
+    margin: 0 auto;
+    background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+    border-radius: 50%;
+    box-shadow: 0 3px 9px rgba(0,0,0,.15);
+}
