@@ -1,5 +1,5 @@
 .typography {
-    .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    h1, h2, h3, h4, h5, h6 {
         margin-bottom: 8px;
         font-family: inherit;
         font-weight: 500;
@@ -59,12 +59,17 @@
         margin: 0 0 16px;
     }
 
-    dl, ol, ul {
+    dl, 
+    ol, 
+    ul {
         margin-top: 0;
         margin-bottom: 16px;
     }
 
-    ol ol, ol ul, ul ol, ul ul {
+    ol ol, 
+    ol ul, 
+    ul ol, 
+    ul ul {
         margin-bottom: 0;
     }
 
@@ -74,5 +79,13 @@
 
     table {
         border-collapse: collapse;
+        border: 1px solid #ddd;
+    }
+    table th,
+    table td {
+        padding: 8px;
+        line-height: 1.42857143;
+        vertical-align: top;
+        border-top: 1px solid #ddd;
     }
 }
