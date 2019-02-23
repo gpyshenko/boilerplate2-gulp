@@ -16,6 +16,10 @@
     display: flex;
 }
 
+.inlineFlex {
+    display: inline-flex;
+}
+
 .flexColumn,
 .flexColumn-C {
     flex-direction: column;
@@ -27,7 +31,9 @@
     align-items: center;
 }
 
-.flexWrap, .flexGrid {
+.flexWrap,
+.inlineFlex,
+.flexGrid {
     flex-wrap: wrap;
 }
 
