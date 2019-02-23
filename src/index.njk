@@ -1,17 +1,13 @@
 {% extends "base/base.njk" %}
 {% block styles %}
     {% set stylesArr = [
-        {core: 'blocks', dir: 'greeting', name: 'greeting'},
-        {core: 'components', dir: 'logo', name: 'logo'}
+        {path: 'templates/blocks/greeting/greeting'},
+        {path: 'templates/components/logo/logo'}
     ] %}
 
     {# Стили на этой странице - Начало #}
-    {# {% for file in ['slick','slick-theme'] %}
-        <link rel="stylesheet" href="{{ 'vendors/' + file + '.css' }}">
-    {% endfor %} #}
-   
     {% for file in stylesArr %}
-        <link rel="stylesheet" href="{{ 'templates/' + file.core + '/' + file.dir + '/' + file.name + '.css' }}">
+        <link rel="stylesheet" href="{{ file.path + '.css' }}">
     {% endfor %}
     {# Стили на этой странице - Конец #}
 {% endblock %}
@@ -22,8 +18,11 @@
 
 {% block scripts %}
     {# Скрипты на этой странице - Начало #}
-    {# {% for file in [{dir: "scripts/", path: "components/info"} %}
-        <script src="{{ file.dir + file.path + '.js' }}"></script>
+    {% set scriptsArr = [
+        {path: 'greeting'}
+    ] %}
+    {# {% for file in scriptsArr %}
+        <script src="{{ file.path + '.js' }}"></script>
     {% endfor %} #}
     {# Скрипты на этой странице - Конец #}
 {% endblock %}

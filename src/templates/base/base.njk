@@ -6,7 +6,9 @@
 </head>
 <body class="flexColumn">
     {% include "blocks/header/header.njk" %}
-    {% block main %}{% endblock %}
+    <main class="main">
+        {% block main %}{% endblock %}
+    </main>
     {% include "blocks/footer/footer.njk" %}
     <!-- Скрипты общие для всего сайта - Начало -->
     {% for file in ['main'] %}

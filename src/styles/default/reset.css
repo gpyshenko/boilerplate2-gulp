@@ -25,7 +25,7 @@ body {
     font-family: var(--mainFont);
     font-weight: 400;
     line-height: 1;
-    color: var(--mainColor);
+    color: rgb(var(--mainColor));
     background-color: #fff;
     overflow-x: hidden;
 } 

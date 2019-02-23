@@ -1,6 +1,6 @@
 :root {
     /* Colors */
-    --mainColor: #000;
+    --mainColor: 0,0,0;
 
     /* Fonts */
     --mainFont: "", sans-serif;
