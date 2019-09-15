@@ -5,11 +5,11 @@
     {% block styles %}{% endblock %}
 </head>
 <body class="flexColumn">
-    {% include "blocks/header/header.njk" %}
+    {% include "blocks/Header/Header.njk" %}
     <main class="main">
         {% block main %}{% endblock %}
     </main>
-    {% include "blocks/footer/footer.njk" %}
+    {% include "blocks/Footer/Footer.njk" %}
     <!-- Скрипты общие для всего сайта - Начало -->
     {% for file in ['main'] %}
         <script src="{{ 'scripts/' + file + '.js' }}"></script>

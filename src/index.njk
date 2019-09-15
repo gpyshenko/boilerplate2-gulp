@@ -1,8 +1,8 @@
 {% extends "base/base.njk" %}
 {% block styles %}
     {% set stylesArr = [
-        {path: 'templates/blocks/greeting/greeting'},
-        {path: 'templates/components/logo/logo'}
+        {path: 'templates/blocks/Greeting/Greeting'},
+        {path: 'templates/components/Logo/Logo'}
     ] %}
 
     {# Стили на этой странице - Начало #}
@@ -13,13 +13,13 @@
 {% endblock %}
 
 {% block main %}
-    {% include "blocks/greeting/greeting.njk" %}
+    {% include "blocks/Greeting/Greeting.njk" %}
 {% endblock  %}
 
 {% block scripts %}
     {# Скрипты на этой странице - Начало #}
     {% set scriptsArr = [
-        {path: 'greeting'}
+        {path: 'Greeting'}
     ] %}
     {# {% for file in scriptsArr %}
         <script src="{{ file.path + '.js' }}"></script>
